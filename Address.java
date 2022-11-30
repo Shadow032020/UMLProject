@@ -1,8 +1,8 @@
 package fr.efrei.domain;
 
 public class Address {
-    private String streetAdress;
-    private String postalAdress;
+    private String streetAddress;
+    private String postalAddress;
     private String city;
     private String country;
     private String streetNumber;
@@ -13,8 +13,8 @@ public class Address {
 
     //add another constructor later
     private Address(Builder builder){
-        this.streetAdress = builder.streetAdress;
-        this.postalAdress = builder.postalAdress;
+        this.streetAddress = builder.streetAddress;
+        this.postalAddress = builder.postalAddress;
         this.city=builder.city;
         this.country=builder.country;
         this.streetNumber=builder.streetNumber;
@@ -22,12 +22,12 @@ public class Address {
     }
 
     //getters but no setters, to have protected classes
-    public String getStreetAdress() {
-        return streetAdress;
+    public String getStreetAddress() {
+        return streetAddress;
     }
 
-    public String getPostalAdress() {
-        return postalAdress;
+    public String getPostalAddress() {
+        return postalAddress;
     }
 
     public String getCity() {
@@ -53,8 +53,8 @@ public class Address {
                 ", streetNumber="+streetNumber+
                 ", country="+country+
                 ", city="+city+
-                ", postalAdress="+postalAdress+
-                ",streetAdress=" + streetAdress +
+                ", postalAdress="+postalAddress+
+                ",streetAdress=" + streetAddress +
                 "}";
     }
 
@@ -64,8 +64,8 @@ public class Address {
         public String streetNumber;
         public String country;
         public String city;
-        public String postalAdress;
-        public String streetAdress;
+        public String postalAddress;
+        public String streetAddress;
 
         //setters, not getters
         public Builder setPostalCode(double postalCode) {
@@ -84,19 +84,19 @@ public class Address {
             this.city = city;
             return this; 
         }
-        public Builder setPostalAdress(String postalAdress) {
-            this.postalAdress = postalAdress;
+        public Builder setPostalAddress(String postalAddress) {
+            this.postalAddress = postalAddress;
             return this; 
         }
             
-        public Builder setStreetAdress(String streetAdress) {
-            this.streetAdress = streetAdress;
+        public Builder setStreetAddress(String streetAddress) {
+            this.streetAddress = streetAddress;
             return this; 
         }
 
         public Builder copy(Address address){
-            this.streetAdress = address.streetAdress;
-            this.postalAdress = address.postalAdress;
+            this.streetAddress = address.streetAddress;
+            this.postalAddress = address.postalAddress;
             this.city=address.city;
             this.country=address.country;
             this.streetNumber=address.streetNumber;
